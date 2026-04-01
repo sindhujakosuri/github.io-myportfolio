@@ -3,130 +3,486 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Kosuri Sunitha Sindhuja Portfolio</title>
+<title>Kosuri Sunitha Sindhuja — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--primary-color:#1e2a78;--secondary-color:#30d5c8;--accent-color:#ff6f61;--background-gradient:linear-gradient(135deg,#243B55 0%,#141E30 100%);--light-background:#f0f4f8;--text-color:#eef2f7;--shadow-glow:0 0 15px rgba(255,111,97,.6);--button-hover-glow:0 0 12px 3px rgba(48,213,200,.8)}*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}body{background:var(--background-gradient);color:var(--text-color);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}header{position:fixed;width:100%;background:rgba(30,42,120,.95);box-shadow:0 0 20px var(--shadow-glow);z-index:1000}nav{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem}nav .logo{font-size:1.9rem;font-weight:900;color:var(--accent-color);letter-spacing:2px;user-select:none;cursor:default;text-shadow:0 0 8px var(--accent-color)}nav ul{list-style:none;display:flex;gap:1.5rem}nav ul li{cursor:pointer;padding:.5rem 1rem;border-radius:6px;transition:background-color .4s ease,box-shadow .4s ease;user-select:none;color:var(--text-color);font-weight:600;text-shadow:0 0 4px #0008}nav ul li:hover,nav ul li.active{background-color:var(--accent-color);color:var(--light-background);box-shadow:var(--button-hover-glow)}section{max-width:1100px;margin:100px auto 60px;padding:2rem 3rem;background:linear-gradient(145deg,#344675,#28315e);border-radius:15px;box-shadow:0 15px 30px rgba(0,0,0,.7);animation:fadeInUp 1s ease forwards;opacity:0;transform:translateY(40px);color:var(--text-color)}section.visible{opacity:1;transform:translateY(0)}h1,h2{color:var(--accent-color);margin-bottom:1rem;font-weight:900;letter-spacing:1.5px;text-shadow:0 0 8px var(--accent-color)}h1{font-size:3.5rem;line-height:1.1}h2{font-size:2.6rem}#home{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:3rem;min-height:80vh;text-align:center;color:var(--text-color);text-shadow:0 0 6px #0009}#home .home-text p{font-size:1.6rem;margin:1.5rem 0 2.5rem;color:var(--secondary-color);font-weight:600;text-shadow:0 0 6px #30d5c8aa}#home .home-image img{width:700%;max-width:250px;border-radius:30%;box-shadow:0 0 40px var(--accent-color),0 0 60px var(--secondary-color);animation:float 4s ease-in-out infinite;transition:box-shadow .4s ease}#home .home-image img:hover{box-shadow:0 0 80px var(--accent-color),0 0 90px var(--secondary-color)}.education-block{margin-bottom:2rem;padding:1.5rem 2rem;border-left:6px solid var(--primary-color);background:#28315e95;border-radius:12px;box-shadow:inset 0 0 15px #20305f88;color:var(--text-color)}.education-block h3{margin-bottom:.5rem;font-weight:900;color:var(--secondary-color);text-shadow:0 0 6px #30d5c8bb}.education-block p{font-size:1.15rem;margin:.3rem 0;font-weight:600}.skills-container{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center}.skill{background:#2c3a70cc;border-radius:20px;width:280px;padding:1.5rem 2rem;box-shadow:0 8px 20px rgba(255,111,97,.3),inset 0 0 12px #30d5c8aa;transition:transform .3s ease,box-shadow .5s ease;cursor:default;color:var(--text-color)}.skill:hover{transform:translateY(-8px);box-shadow:0 12px 30px var(--accent-color),inset 0 0 20px var(--secondary-color);animation:pulseGlow 2.5s infinite}.skill h3{margin-bottom:1.3rem;color:var(--accent-color);font-weight:900;text-shadow:0 0 7px var(--accent-color)}.progress-bar{background:#1c2448;border-radius:25px;overflow:hidden;position:relative;height:28px;box-shadow:inset 0 0 8px #30d5c8cc}.progress-bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,#30d5c8,#ff6f61);border-radius:25px;text-align:right;line-height:28px;color:#fff;font-weight:700;padding-right:14px;transition:width 1.8s ease;user-select:none;box-shadow:0 0 8px #30d5c8cc}.certificates-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:4rem 3rem;justify-items:center;padding-top:2rem}.certificate-card{background-color:#1f2b60cc;border-radius:20px;box-shadow:0 0 35px var(--secondary-color),inset 0 0 25px var(--accent-color);width:100%;max-width:440px;overflow:hidden;transition:transform .3s ease,box-shadow .6s ease;cursor:pointer;color:var(--text-color);display:flex;flex-direction:column;align-items:center;padding-bottom:30px;padding-top:15px}.certificate-card:hover{transform:scale(1.12);box-shadow:0 0 60px var(--accent-color),inset 0 0 40px var(--secondary-color)}.certificate-image{width:80%;max-height:180px;object-fit:contain;background:#0a1430;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#888;user-select:none;box-shadow:inset 0 0 25px #30d5c8aa;margin:25px auto 20px;border-radius:12px;overflow:hidden}.certificate-image img{width:100%;height:100%;border-radius:12px;object-fit:contain;user-select:none}.certificate-desc{padding:0 2rem;font-weight:800;color:var(--accent-color);text-align:center;letter-spacing:1px;text-shadow:0 0 8px var(--accent-color);font-size:1.25rem;line-height:1.5;min-height:130px;display:flex;align-items:center;justify-content:center}form{max-width:600px;margin:0 auto;color:var(--text-color)}form label{display:block;margin-bottom:.6rem;font-weight:900;color:var(--secondary-color);letter-spacing:.05em;text-shadow:0 0 5px #30d5c8aa}form input,form textarea{width:100%;padding:1rem;margin-bottom:1.7rem;border-radius:12px;border:2px solid #30d5c8;font-size:1.1rem;background:#1e2a4dcc;color:var(--text-color);transition:border-color .4s ease,box-shadow .4s ease;resize:vertical;box-shadow:inset 0 0 8px #30d5c8aa}form input::placeholder,form textarea::placeholder{color:#a3cfd9cc;font-weight:600}form input:focus,form textarea:focus{outline:none;border-color:var(--accent-color);box-shadow:0 0 18px var(--accent-color)}form button{padding:1rem 2.2rem;background-color:var(--accent-color);border:none;border-radius:30px;color:var(--light-background);font-weight:900;font-size:1.2rem;cursor:pointer;transition:background-color .4s ease,box-shadow .5s ease;display:block;margin:0 auto;width:190px;text-shadow:0 0 7px var(--light-background);box-shadow:0 0 20px var(--accent-color);user-select:none}form button:hover{background-color:#e44735;box-shadow:0 0 30px #ff8a78}footer{text-align:center;padding:1.2rem;font-size:1rem;color:#a7b0cf;background:rgba(30,42,120,.7);border-top:1px solid #28315e;margin-top:auto;text-shadow:0 0 4px #000a}@keyframes fadeInUp{0%{opacity:0;transform:translateY(40px)}100%{opacity:1;transform:translateY(0)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}@keyframes pulseGlow{0%,100%{box-shadow:0 12px 30px var(--accent-color),inset 0 0 20px var(--secondary-color)}50%{box-shadow:0 15px 40px #ff9266,inset 0 0 30px #33f9d2}}@media (max-width: 768px){nav ul{gap:1rem}#home{flex-direction:column}.skills-container{flex-direction:column;align-items:center}.skill{width:90%;max-width:420px}.certificates-container{display:flex;flex-direction:column;align-items:center;gap:3rem;padding-top:2rem}.certificate-card{max-width:420px;width:90%;padding-bottom:35px}}
-</style>
-</head>
-<body>
-<header>
-<nav>
-<div class="logo" aria-label="Site logo and portfolio owner name">Kosuri Sunitha Sindhuja</div>
-<ul id="nav-links" role="list" aria-label="Primary navigation">
-<li class="nav-link active" data-target="home" role="listitem" tabindex="0">Home</li>
-<li class="nav-link" data-target="education" role="listitem" tabindex="0">Education</li>
-<li class="nav-link" data-target="skills" role="listitem" tabindex="0">Skills</li>
-<li class="nav-link" data-target="certificates" role="listitem" tabindex="0">Certificates</li>
-<li class="nav-link" data-target="contact" role="listitem" tabindex="0">Contact</li>
-</ul>
-</nav>
-</header>
-<main>
-<section id="home" class="visible" role="region" aria-labelledby="home-heading" tabindex="-1">
-<div class="home-text" role="banner" aria-label="Introduction">
-<p>Welcome to My Portfolio</p>
-<h1 id="home-heading">Kosuri Sunitha Sindhuja</h1>
-<h2>B.Tech 3rd Year Student</h2>
-<p style="margin-top:1.5rem;font-size:1.1rem;color:var(--text-color);max-width:480px;margin-left:auto;margin-right:auto;">Passionate about web development and UI/UX design. Dedicated to learning and applying modern technologies such as HTML, CSS, React.js, and Node.js to create impactful digital experiences.</p>
-</div>
-<div class="home-image" aria-label="Profile Picture">
-<img src="image.jpg" alt="Kosuri Sunitha Sindhuja Profile Picture" />
-</div>
-</section>
-<section id="education" aria-labelledby="education-heading" tabindex="-1" role="region">
-<h2 id="education-heading">Education</h2>
-<div class="education-block" aria-label="Schooling details">
-<h3>Schooling</h3>
-<p><strong>Sarad English Medium High School, Akividu</strong> - Completed in 2020</p>
-<p>Percentage: 90%</p>
-</div>
-<div class="education-block" aria-label="Intermediate details">
-<h3>Intermediate</h3>
-<p><strong>Karthikeya Junior College, Akividu</strong> - 2021-2022</p>
-<p>Percentage: 98%</p>
-</div>
-<div class="education-block" aria-label="B.Tech details">
-<h3>B.Tech (3rd Year)</h3>
-<p><strong>Sasi Institute of Technology and Engineering</strong></p>
-<p>Current Percentage: 92%</p>
-</div>
-</section>
-<section id="skills" aria-labelledby="skills-heading" tabindex="-1" role="region">
-<h2 id="skills-heading">Skills & Knowledge</h2>
-<div class="skills-container" role="list" aria-label="Skill proficiency levels">
-<article class="skill" role="listitem" aria-label="HTML knowledge 80 percent">
-<h3>HTML</h3>
-<div class="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" role="progressbar" tabindex="0"><span style="width:0%">0%</span></div>
-</article>
-<article class="skill" role="listitem" aria-label="CSS knowledge 80 percent">
-<h3>CSS</h3>
-<div class="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" role="progressbar" tabindex="0"><span style="width:0%">0%</span></div>
-</article>
-<article class="skill" role="listitem" aria-label="Node.js knowledge 50 percent">
-<h3>Node.js</h3>
-<div class="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar" tabindex="0"><span style="width:0%">0%</span></div>
-</article>
-<article class="skill" role="listitem" aria-label="React.js knowledge 50 percent">
-<h3>React.js</h3>
-<div class="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar" tabindex="0"><span style="width:0%">0%</span></div>
-</article>
-<article class="skill" role="listitem" aria-label="UI/UX Design knowledge 70 percent">
-<h3>UI/UX Design</h3>
-<div class="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70" role="progressbar" tabindex="0"><span style="width:0%">0%</span></div>
-</article>
-</div>
-</section>
-<section id="certificates" aria-labelledby="certificates-heading" tabindex="-1" role="region">
-<h2 id="certificates-heading">Certificates</h2>
-<div class="certificates-container" role="list" aria-label="Certificates and achievements">
-<div class="certificate-card" role="listitem" tabindex="0">
-<div class="certificate-image" aria-label="Completion on 500 difficulty rating problems certificate image placeholder">
-<img src="pic1.jpg" alt="Certificate: Completion on 500 difficulty rating problems in CodeChef" />
-</div>
-<div class="certificate-desc"><p>Completion on 500 Difficulty Rating Problems in CodeChef</p></div>
-</div>
-<div class="certificate-card" role="listitem" tabindex="0">
-<div class="certificate-image" aria-label="Java Certificate in CodeChef image placeholder">
-<img src="pic2.jpg" alt="Certificate: Completion of Java Certificate in CodeChef" />
-</div>
-<div class="certificate-desc"><p>Completion of Java Certificate in CodeChef</p></div>
-</div>
-<div class="certificate-card" role="listitem" tabindex="0">
-<div class="certificate-image" aria-label="Participation in Hackathon Prayatna 2.0 image placeholder">
-<img src="pic3.jpg" alt="Certificate: Participation in Hackathon Prayatna 2.0 organised by SITE ACM and AITR ACM" />
-</div>
-<div class="certificate-desc"><p>Participation in Hackathon Prayatna 2.0 organised by SITE ACM and AITR ACM</p></div>
-</div>
-<div class="certificate-card" role="listitem" tabindex="0">
-<div class="certificate-image" aria-label="Completion of 4 months full stack internship at CODEC TECHNOLOGIES image placeholder">
-<img src="pic4.jpg" alt="Certificate: Completion of 4 months Full Stack Development Internship in CODEC TECHNOLOGIES" />
-</div>
-<div class="certificate-desc"><p>Completion of 4 Months Full Stack Development Internship in CODEC TECHNOLOGIES</p></div>
-</div>
-<div class="certificate-card" role="listitem" tabindex="0">
-<div class="certificate-image" aria-label="Completion of 1 month frontend development internship at CodeAlpha image placeholder">
-<img src="pic5.jpg" alt="Certificate: Completion of 1 Month Frontend Development Internship (Portfolio, Image Gallery, Calculator tasks) at CodeAlpha" />
-</div>
-<div class="certificate-desc"><p>Completion of 1 Month Frontend Development Internship by Completing 3 Tasks (Portfolio, Image Gallery, Calculator) at CodeAlpha</p></div>
-</div>
-</div>
-</section>
-<section id="contact" aria-labelledby="contact-heading" tabindex="-1" role="region">
-<h2 id="contact-heading">Contact Info</h2>
-<form id="contact-form" aria-label="Contact form">
-<label for="name">Name</label>
-<input type="text" id="name" name="name" placeholder="Kosuri Sunitha Sindhuja" required aria-required="true" autocomplete="name" />
-<label for="phone">Phone Number</label>
-<input type="tel" id="phone" name="phone" placeholder="+91 0000000000" pattern="\\+?\\d{10,15}" required aria-required="true" autocomplete="tel" />
-<label for="email">Gmail</label>
-<input type="email" id="email" name="email" placeholder="example@gmail.com" required aria-required="true" autocomplete="email" />
-<button type="submit" aria-label="Send Message">Contact</button>
-</form>
-</section>
-</main>
-<footer>&copy; 2025 Kosuri Sunitha Sindhuja | All Rights Reserved.</footer>
-<script>
-const navLinks=document.querySelectorAll('.nav-link'),sections=document.querySelectorAll('section');function activateLink(){let e=window.scrollY+130;sections.forEach(t=>{e>=t.offsetTop&&e<t.offsetTop+t.offsetHeight&&(navLinks.forEach(n=>{n.classList.remove('active'),n.dataset.target===t.id&&n.classList.add('active')}),t.classList.add('visible'))})}window.addEventListener('scroll',activateLink),window.addEventListener('load',()=>{activateLink(),animateSkills()}),navLinks.forEach(e=>{e.addEventListener('click',()=>{document.getElementById(e.dataset.target).scrollIntoView({behavior:'smooth'})}),e.addEventListener('keydown',t=>{('Enter'===t.key||' '===t.key)&&(t.preventDefault(),document.getElementById(e.dataset.target).scrollIntoView({behavior:'smooth'}))})});const skillsSection=document.getElementById('skills');let skillsAnimated=!1;function animateSkills(){const e=window.innerHeight+window.scrollY>skillsSection.offsetTop+100;!skillsAnimated&&e&&(skillsAnimated=!0,skillsSection.querySelectorAll('.progress-bar span').forEach(e=>{let t=e.parentElement.getAttribute('aria-valuenow');e.style.width=`${t}%`,setTimeout(()=>{e.textContent=`${t}%`},1800)}))}window.addEventListener('scroll',animateSkills),document.getElementById('contact-form').addEventListener('submit',e=>{e.preventDefault(),alert('Thank you for reaching out! I will get back to you soon.'),e.target.reset()});
-</script>
-</body>
-</html>
+:root {
+  --cream: #faf8f5;
+  --warm-white: #f5f2ed;
+  --blush: #f2e8e0;
+  --sage: #b8c9b5;
+  --sage-dark: #7a9e76;
+  --dusty-rose: #c9a89a;
+  --terracotta: #b5614a;
+  --navy: #1d2b45;
+  --navy-light: #2e4170;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a0;
+  --text-dark: #2c2c2c;
+  --text-mid: #555555;
+  --text-light: #888888;
+  --border: #e0d8cf;
+  --card-bg: #ffffff;
+  --shadow: 0 4px 30px rgba(29,43,69,0.08);
+  --shadow-hover: 0 12px 40px rgba(29,43,69,0.15);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--cream);
+  color: var(--text-dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: rgba(250,248,245,0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.3s;
+}
+header.scrolled { box-shadow: 0 2px 20px rgba(29,43,69,0.1); }
+
+nav {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 2.5rem;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.5px;
+}
+.logo span { color: var(--terracotta); }
+
+nav ul { list-style: none; display: flex; gap: 0.3rem; }
+
+nav ul li {
+  padding: 0.45rem 1rem;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+nav ul li:hover, nav ul li.active {
+  background: var(--navy);
+  color: #fff;
+}
+
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 7rem 2.5rem 5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+section.visible { opacity: 1; transform: translateY(0); }
+
+#home {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding-top: 9rem;
+}
+
+.home-left { order: 1; }
+.home-right { order: 2; display: flex; justify-content: center; }
+
+.greeting {
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.greeting::before {
+  content: '';
+  width: 30px;
+  height: 1.5px;
+  background: var(--terracotta);
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--dusty-rose);
+  margin-bottom: 1.5rem;
+}
+
+.home-desc {
+  font-size: 1rem;
+  color: var(--text-mid);
+  max-width: 460px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.ieee-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #eef3ff, #dce8ff);
+  border: 1px solid #b8cdf5;
+  border-radius: 100px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2e4170;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.2px;
+}
+.ieee-badge svg { width: 16px; height: 16px; }
+
+.btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.btn-primary {
+  padding: 0.85rem 2rem;
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+.btn-primary:hover { background: var(--terracotta); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(181,97,74,0.3); }
+
+.btn-outline {
+  padding: 0.85rem 2rem;
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid var(--navy);
+  border-radius: 100px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-outline:hover { background: var(--navy); color: #fff; transform: translateY(-2px); }
+
+.profile-wrap {
+  position: relative;
+  width: 320px;
+  height: 380px;
+}
+.profile-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--gold-light), var(--blush));
+  border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+  animation: morph 8s ease-in-out infinite;
+}
+@keyframes morph {
+  0%, 100% { border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%; }
+  50% { border-radius: 60% 40% 40% 60% / 60% 60% 40% 40%; }
+}
+.profile-img {
+  position: absolute;
+  inset: 16px;
+  border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+  overflow: hidden;
+  animation: morph 8s ease-in-out infinite;
+}
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.profile-accent {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--sage);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.profile-accent2 {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 60px;
+  height: 60px;
+  background: var(--sage-dark);
+  border-radius: 50%;
+  opacity: 0.15;
+}
+
+.section-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.section-label::before { content: ''; width: 30px; height: 1.5px; background: var(--terracotta); }
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 3rem;
+  line-height: 1.15;
+}
+
+.edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+
+.edu-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+.edu-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--terracotta), var(--gold));
+}
+.edu-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+
+.edu-year {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--terracotta);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+.edu-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+}
+.edu-card p { font-size: 0.92rem; color: var(--text-mid); }
+.edu-score {
+  margin-top: 1rem;
+  display: inline-block;
+  background: linear-gradient(135deg, #eef8ee, #d5efd5);
+  color: var(--sage-dark);
+  padding: 0.3rem 0.9rem;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.ieee-section {
+  background: linear-gradient(135deg, #1d2b45, #2e4170);
+  border-radius: 24px;
+  padding: 3rem;
+  margin-top: 3rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.ieee-section::before {
+  content: 'IEEE';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.04);
+  letter-spacing: -5px;
+  user-select: none;
+}
+.ieee-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.ieee-icon-wrap {
+  width: 64px;
+  height: 64px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ieee-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.ieee-subtitle { color: rgba(255,255,255,0.65); font-size: 0.92rem; }
+
+.ieee-events {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.ieee-event {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 1.2rem 1.5rem;
+  transition: background 0.3s;
+}
+.ieee-event:hover { background: rgba(255,255,255,0.12); }
+.event-role {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 0.4rem;
+}
+.event-name { font-weight: 500; font-size: 0.95rem; color: #fff; margin-bottom: 0.2rem; }
+.event-detail { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; }
+
+.skill-card {
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 1.6rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+.skill-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+
+.skill-name {
+  font-weight: 600;
+  color: var(--navy);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skill-pct { font-size: 0.82rem; color: var(--terracotta); font-weight: 700; }
+
+.bar-track {
+  width: 100%;
+  height: 6px;
+  background: var(--blush);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--terracotta), var(--gold));
+  border-radius: 100px;
+  transition: width 1.6s cubic-bezier(.25,.46,.45,.94);
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem;
+}
+
+.cert-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+.cert-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+
+.cert-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: var(--warm-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cert-img img { width: 100%; height: 100%; object-fit: contain; padding: 1rem; }
+
+.cert-body { padding: 1.4rem 1.6rem; }
+.cert-org {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 0.4rem;
+}
+.cert-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: start;
+}
+.contact-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(
